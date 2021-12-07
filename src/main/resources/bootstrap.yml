@@ -1,0 +1,16 @@
+# bm-gateway-service
+
+spring:  application:    name: bm-gateway-service
+  profiles:    active: dev
+  cloud:
+    config:      uri: http://localhost:8888
+      
+      
+      
+# spring.application.name=value in this file appears in Eureka Dashboard Application name column
+# spring.application.name=value in bm-config-service -> bm-gateway-service'-dev.yml does not appears in Eureka Dashboard Application name column
+# In this file, Its value 'bm-gateway-service' must match at 3 places - 
+# 1 -> bm-config-service -> src/main/resources -> configuration -> 'bm-gateway-service' (folder name)
+# 2 -> bm-config-service -> src/main/resources -> configuration -> bm-gateway-service -> 'bm-gateway-service'-dev.yml (profile file name)
+# 3 -> bm-config-service -> src/main/resources -> application.yml -> classpath:/configuration/'bm-gateway-service' (search location mentionables)
+# or else, bm-gateway-service will not start in specified port (8443), will start on default port (8080, if unused)

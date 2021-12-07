@@ -1,0 +1,9 @@
+
+
+     Microservice    :   bm-gateway-service [8443: hardcoded in banner]
+     SpringBoot      :   ${spring-boot.formatted-version}
+     
+     Description     :   Netflix Zuul API Gateway - @EnableZuulProxy | Now in maintenance mode
+                         Spring Cloud API Gateway - uses WebFlux Reactive Programming concept
+						
+
