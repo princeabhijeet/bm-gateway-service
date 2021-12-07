@@ -3,4 +3,5 @@
 Netflix Zuul API Gateway | Spring Cloud API Gateway
 
 @EnableZuulProxy
+
 @EnableEurekaClient
