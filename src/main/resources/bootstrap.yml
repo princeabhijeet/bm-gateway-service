@@ -4,8 +4,7 @@ spring:  application:    name: bm-gateway-service
   profiles:    active: dev
   cloud:
     config:      uri: http://localhost:8888
-      
-      
+
       
 # spring.application.name=value in this file appears in Eureka Dashboard Application name column
 # spring.application.name=value in bm-config-service -> bm-gateway-service'-dev.yml does not appears in Eureka Dashboard Application name column

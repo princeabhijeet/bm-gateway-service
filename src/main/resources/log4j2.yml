@@ -1,0 +1,31 @@
+configuration: 
+  status: debug
+  appenders:
+    Console:
+      name: LogToConsole
+      PatternLayout:
+        Pattern: '[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n'
+    RollingFile:
+    - name: LogToRollingFile
+      fileName: /logs/bm-gateway-service/bm-gateway-service.log
+      filePattern: /logs/bm-gateway-service/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.bm-gateway-service.gz
+      PatternLayout:
+        Pattern: '[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n'
+      Policies:
+        SizeBasedTriggeringPolicy:
+          Size: 10 MB
+      DefaultRollOverStrategy:
+        max: 10
+  Loggers:
+    logger:
+    - name: com.prince
+      level: debug
+      additivity: false
+      AppenderRef:
+      - ref: LogToConsole
+      - ref: LogToRollingFile
+    Root:
+      level: error
+      AppenderRef:
+       ref: LogToConsole
+       
