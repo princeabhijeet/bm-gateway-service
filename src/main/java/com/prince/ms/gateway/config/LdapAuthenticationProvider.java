@@ -105,7 +105,7 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 	    	initialDirectoryContext = new InitialDirContext(properties);
 		} 
     	catch (NamingException e) {
-			throw new GatewayException("LDAP - Invalid LDAP configuration in Gateway Config", HttpStatus.UNAUTHORIZED.value());
+			throw new GatewayException("LDAP - Invalid LDAP configuration in Gateway Config or LDAP Server not up", HttpStatus.UNAUTHORIZED.value());
 		}
     	return initialDirectoryContext;
     }
