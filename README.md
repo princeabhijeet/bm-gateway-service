@@ -6,4 +6,4 @@ Netflix Zuul API Gateway | Spring Cloud API Gateway
 
 @EnableEurekaClient
 
-LDAP - Eclipse Plugin - Apache Directory Studio (Plugin) - Eclipse based LDAP Server/Browser
+LDAP - Apache Directory Studio (Eclipse Plugin) - Eclipse based LDAP Server/Browser
