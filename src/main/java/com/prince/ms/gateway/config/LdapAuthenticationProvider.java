@@ -132,4 +132,5 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 		return authentication.equals(UsernamePasswordAuthenticationToken.class);
 	}
     
+	
 }
