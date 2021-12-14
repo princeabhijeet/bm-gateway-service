@@ -32,4 +32,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(ldapAuthenticationProvider);
     }
 	
+	
 }
